@@ -178,6 +178,11 @@ extend = "set-env-docker"
 command = "docker"
 args = ["compose", "up", "-d", "redis"]
 
+[tasks.compose-stop-db]
+extend = "set-env-docker"
+command = "docker"
+args = ["compose", "stop", "postgres"]
+
 [tasks.compose-down]
 extend = "set-env-docker"
 command = "docker"
